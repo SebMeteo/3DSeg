@@ -97,7 +97,8 @@ end
 % cd('F:\MSU PhD Research\Snow Stereology\2013-12-13 Shear NEW Series\0930\Trans')
 fprintf('Begin image import.\n')
 bw=BinStackImprt(FirstPathName,FirstInName(1:end-4),'%04d',ext,FirstImageNum,imsize,LastImageNum); %Builds binary array from image stack
-bw = logical(bw);
+%bw = logical(bw); 
+% Instead of that command, you can directly put bw=false(imsize(1),imsize(2),1); in the BinStackImprt function, for the 'for' loop
 %bw=1;
 
 fprintf('Image Import complete!\n')
